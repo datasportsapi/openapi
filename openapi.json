@@ -5,10 +5,10 @@
     "title": "DataSportsAPI",
     "version": "2026-11-16",
     "summary": "Real-time sports data over REST for 24 sports — scores, schedules, lineups, match statistics, tables, and team, player and league profiles.",
-    "description": "One consistent JSON contract for 24 sports: fixtures and live scores, lineups and statistics, standings, plus teams, players and leagues, delivered in real time over REST, WebSocket and webhooks.\n\nSuccessful responses use a `{ data, meta? }` envelope; failures return `{ error: { code, message } }` under a matching HTTP status. All ids are DataSportsAPI ids. Each component schema documents its fields, units and enum values, as does the data reference (https://datasportsapi.com/markdown/reference.md). The WebSocket stream, webhooks and widgets are documented at https://datasportsapi.com/docs/.\n\nAvailability: pre-launch. This documents the v2 contract. Accounts and API keys are open now at https://datasportsapi.com/signup/; calls to the API, the SDK packages and the status feed start with the public launch. From launch, during the beta, the Free plan allows 1,000 requests a day (100 a day after).",
+    "description": "One consistent JSON contract for 24 sports: fixtures and live scores, lineups and statistics, standings, plus teams, players and leagues, delivered in real time over REST, WebSocket and webhooks.\n\nSuccessful responses use a `{ data, meta? }` envelope; failures return `{ error: { code, message } }` under a matching HTTP status. All ids are DataSportsAPI ids. Each component schema documents its fields, units and enum values, as does the data reference (https://datasportsapi.com/markdown/reference.md). The WebSocket stream, webhooks and widgets are documented at https://datasportsapi.com/docs/.\n\nAvailability: live. During the beta the Free plan allows 1,000 requests a day (100 a day after).",
     "contact": {
       "name": "DataSportsAPI",
-      "email": "contact@noventra.dev",
+      "email": "hello@datasportsapi.com",
       "url": "https://datasportsapi.com/contact/"
     }
   },
@@ -122,7 +122,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/catalog/sports-list/"
+          "url": "https://datasportsapi.com/docs/catalog/sports-list/"
         },
         "parameters": [],
         "responses": {
@@ -272,7 +272,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/sports\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/sports\""
           },
           {
             "lang": "TypeScript",
@@ -314,7 +314,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/catalog/sports-coverage/"
+          "url": "https://datasportsapi.com/docs/catalog/sports-coverage/"
         },
         "parameters": [],
         "responses": {
@@ -432,7 +432,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/coverage\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/coverage\""
           },
           {
             "lang": "TypeScript",
@@ -474,7 +474,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/livescores/list/"
+          "url": "https://datasportsapi.com/docs/livescores/list/"
         },
         "parameters": [
           {
@@ -643,7 +643,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/livescores\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/livescores\""
           },
           {
             "lang": "TypeScript",
@@ -682,7 +682,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/livescores/wire/"
+          "url": "https://datasportsapi.com/docs/livescores/wire/"
         },
         "parameters": [
           {
@@ -893,7 +893,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/livescores/wire\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/livescores/wire\""
           },
           {
             "lang": "TypeScript",
@@ -935,7 +935,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/list/"
+          "url": "https://datasportsapi.com/docs/fixtures/list/"
         },
         "parameters": [
           {
@@ -1186,7 +1186,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures?date=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures?date=…\""
           },
           {
             "lang": "TypeScript",
@@ -1228,7 +1228,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/counts/"
+          "url": "https://datasportsapi.com/docs/fixtures/counts/"
         },
         "parameters": [
           {
@@ -1392,7 +1392,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/counts\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/counts\""
           },
           {
             "lang": "TypeScript",
@@ -1434,7 +1434,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/get/"
+          "url": "https://datasportsapi.com/docs/fixtures/get/"
         },
         "parameters": [
           {
@@ -1563,7 +1563,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -1605,7 +1605,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/lineups/"
+          "url": "https://datasportsapi.com/docs/fixtures/lineups/"
         },
         "parameters": [
           {
@@ -1734,7 +1734,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/lineups\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/lineups\""
           },
           {
             "lang": "TypeScript",
@@ -1776,7 +1776,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/statistics/"
+          "url": "https://datasportsapi.com/docs/fixtures/statistics/"
         },
         "parameters": [
           {
@@ -1905,7 +1905,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/statistics\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/statistics\""
           },
           {
             "lang": "TypeScript",
@@ -1947,7 +1947,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/events/"
+          "url": "https://datasportsapi.com/docs/fixtures/events/"
         },
         "parameters": [
           {
@@ -2088,7 +2088,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/events\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/events\""
           },
           {
             "lang": "TypeScript",
@@ -2128,7 +2128,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/play-by-play/"
+          "url": "https://datasportsapi.com/docs/fixtures/play-by-play/"
         },
         "parameters": [
           {
@@ -2269,7 +2269,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/play-by-play\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/play-by-play\""
           },
           {
             "lang": "TypeScript",
@@ -2311,7 +2311,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/h2h/"
+          "url": "https://datasportsapi.com/docs/fixtures/h2h/"
         },
         "parameters": [
           {
@@ -2447,7 +2447,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/h2h\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/h2h\""
           },
           {
             "lang": "TypeScript",
@@ -2489,7 +2489,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/h2h-fixtures/"
+          "url": "https://datasportsapi.com/docs/fixtures/h2h-fixtures/"
         },
         "parameters": [
           {
@@ -2633,7 +2633,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/h2h/fixtures\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/h2h/fixtures\""
           },
           {
             "lang": "TypeScript",
@@ -2673,7 +2673,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/best-players/"
+          "url": "https://datasportsapi.com/docs/fixtures/best-players/"
         },
         "parameters": [
           {
@@ -2802,7 +2802,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/best-players\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/best-players\""
           },
           {
             "lang": "TypeScript",
@@ -2842,7 +2842,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/momentum/"
+          "url": "https://datasportsapi.com/docs/fixtures/momentum/"
         },
         "parameters": [
           {
@@ -2971,7 +2971,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/momentum\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/momentum\""
           },
           {
             "lang": "TypeScript",
@@ -3011,7 +3011,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/win-probability/"
+          "url": "https://datasportsapi.com/docs/fixtures/win-probability/"
         },
         "parameters": [
           {
@@ -3162,7 +3162,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/win-probability\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/win-probability\""
           },
           {
             "lang": "TypeScript",
@@ -3202,7 +3202,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/source-win-probability/"
+          "url": "https://datasportsapi.com/docs/fixtures/source-win-probability/"
         },
         "parameters": [
           {
@@ -3340,7 +3340,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/win-probability/source\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/win-probability/source\""
           },
           {
             "lang": "TypeScript",
@@ -3380,7 +3380,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/commentary/"
+          "url": "https://datasportsapi.com/docs/fixtures/commentary/"
         },
         "parameters": [
           {
@@ -3521,7 +3521,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/commentary\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/commentary\""
           },
           {
             "lang": "TypeScript",
@@ -3561,7 +3561,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/shotmap/"
+          "url": "https://datasportsapi.com/docs/fixtures/shotmap/"
         },
         "parameters": [
           {
@@ -3702,7 +3702,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/shotmap\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/shotmap\""
           },
           {
             "lang": "TypeScript",
@@ -3744,7 +3744,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/form/"
+          "url": "https://datasportsapi.com/docs/fixtures/form/"
         },
         "parameters": [
           {
@@ -3873,7 +3873,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/form\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/form\""
           },
           {
             "lang": "TypeScript",
@@ -3915,7 +3915,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/streaks/"
+          "url": "https://datasportsapi.com/docs/fixtures/streaks/"
         },
         "parameters": [
           {
@@ -4044,7 +4044,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/streaks\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/streaks\""
           },
           {
             "lang": "TypeScript",
@@ -4084,7 +4084,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/heatmap/"
+          "url": "https://datasportsapi.com/docs/fixtures/heatmap/"
         },
         "parameters": [
           {
@@ -4235,7 +4235,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/heatmap/{playerId}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/heatmap/{playerId}\""
           },
           {
             "lang": "TypeScript",
@@ -4275,7 +4275,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/player-actions/"
+          "url": "https://datasportsapi.com/docs/fixtures/player-actions/"
         },
         "parameters": [
           {
@@ -4426,7 +4426,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/players/{playerId}/actions\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/players/{playerId}/actions\""
           },
           {
             "lang": "TypeScript",
@@ -4468,7 +4468,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/series/"
+          "url": "https://datasportsapi.com/docs/fixtures/series/"
         },
         "parameters": [
           {
@@ -4609,7 +4609,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/series\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/series\""
           },
           {
             "lang": "TypeScript",
@@ -4649,7 +4649,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/average-positions/"
+          "url": "https://datasportsapi.com/docs/fixtures/average-positions/"
         },
         "parameters": [
           {
@@ -4778,7 +4778,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/average-positions\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/average-positions\""
           },
           {
             "lang": "TypeScript",
@@ -4818,7 +4818,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/points/"
+          "url": "https://datasportsapi.com/docs/fixtures/points/"
         },
         "parameters": [
           {
@@ -4947,7 +4947,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/points\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/points\""
           },
           {
             "lang": "TypeScript",
@@ -4989,7 +4989,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/scorecard/"
+          "url": "https://datasportsapi.com/docs/fixtures/scorecard/"
         },
         "parameters": [
           {
@@ -5118,7 +5118,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/scorecard\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/scorecard\""
           },
           {
             "lang": "TypeScript",
@@ -5160,7 +5160,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/umpires/"
+          "url": "https://datasportsapi.com/docs/fixtures/umpires/"
         },
         "parameters": [
           {
@@ -5301,7 +5301,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/umpires\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/umpires\""
           },
           {
             "lang": "TypeScript",
@@ -5343,7 +5343,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/weather/"
+          "url": "https://datasportsapi.com/docs/fixtures/weather/"
         },
         "parameters": [
           {
@@ -5484,7 +5484,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/weather\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/weather\""
           },
           {
             "lang": "TypeScript",
@@ -5526,7 +5526,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/games/"
+          "url": "https://datasportsapi.com/docs/fixtures/games/"
         },
         "parameters": [
           {
@@ -5667,7 +5667,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/games\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/games\""
           },
           {
             "lang": "TypeScript",
@@ -5707,7 +5707,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/pitches/"
+          "url": "https://datasportsapi.com/docs/fixtures/pitches/"
         },
         "parameters": [
           {
@@ -5861,7 +5861,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/at-bats/{atBatId}/pitches\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/at-bats/{atBatId}/pitches\""
           },
           {
             "lang": "TypeScript",
@@ -5903,7 +5903,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/fixtures/highlights/"
+          "url": "https://datasportsapi.com/docs/fixtures/highlights/"
         },
         "parameters": [
           {
@@ -6044,7 +6044,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/highlights\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/highlights\""
           },
           {
             "lang": "TypeScript",
@@ -6086,7 +6086,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/get/"
+          "url": "https://datasportsapi.com/docs/teams/get/"
         },
         "parameters": [
           {
@@ -6215,7 +6215,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -6257,7 +6257,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/fixtures/"
+          "url": "https://datasportsapi.com/docs/teams/fixtures/"
         },
         "parameters": [
           {
@@ -6433,7 +6433,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/fixtures\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/fixtures\""
           },
           {
             "lang": "TypeScript",
@@ -6475,7 +6475,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/squad/"
+          "url": "https://datasportsapi.com/docs/teams/squad/"
         },
         "parameters": [
           {
@@ -6616,7 +6616,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/squad\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/squad\""
           },
           {
             "lang": "TypeScript",
@@ -6658,7 +6658,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/transfers/"
+          "url": "https://datasportsapi.com/docs/teams/transfers/"
         },
         "parameters": [
           {
@@ -6799,7 +6799,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/transfers\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/transfers\""
           },
           {
             "lang": "TypeScript",
@@ -6841,7 +6841,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/statistics/"
+          "url": "https://datasportsapi.com/docs/teams/statistics/"
         },
         "parameters": [
           {
@@ -7021,7 +7021,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/statistics?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/statistics?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -7063,7 +7063,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/goal-distribution/"
+          "url": "https://datasportsapi.com/docs/teams/goal-distribution/"
         },
         "parameters": [
           {
@@ -7230,7 +7230,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/goal-distribution?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/goal-distribution?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -7272,7 +7272,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/race-career/"
+          "url": "https://datasportsapi.com/docs/teams/race-career/"
         },
         "parameters": [
           {
@@ -7414,7 +7414,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/race-career\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/race-career\""
           },
           {
             "lang": "TypeScript",
@@ -7456,7 +7456,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/races/"
+          "url": "https://datasportsapi.com/docs/teams/races/"
         },
         "parameters": [
           {
@@ -7614,7 +7614,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/races?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/races?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -7656,7 +7656,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/statistics-seasons/"
+          "url": "https://datasportsapi.com/docs/teams/statistics-seasons/"
         },
         "parameters": [
           {
@@ -7797,7 +7797,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/statistics/seasons\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/statistics/seasons\""
           },
           {
             "lang": "TypeScript",
@@ -7839,7 +7839,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/top-players-seasons/"
+          "url": "https://datasportsapi.com/docs/teams/top-players-seasons/"
         },
         "parameters": [
           {
@@ -7980,7 +7980,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/top-players/seasons\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/top-players/seasons\""
           },
           {
             "lang": "TypeScript",
@@ -8022,7 +8022,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/standings-seasons/"
+          "url": "https://datasportsapi.com/docs/teams/standings-seasons/"
         },
         "parameters": [
           {
@@ -8163,7 +8163,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/standings/seasons\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/standings/seasons\""
           },
           {
             "lang": "TypeScript",
@@ -8205,7 +8205,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/year-statistics/"
+          "url": "https://datasportsapi.com/docs/teams/year-statistics/"
         },
         "parameters": [
           {
@@ -8360,7 +8360,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/year-statistics?year=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/year-statistics?year=…\""
           },
           {
             "lang": "TypeScript",
@@ -8402,7 +8402,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/grand-slams/"
+          "url": "https://datasportsapi.com/docs/teams/grand-slams/"
         },
         "parameters": [
           {
@@ -8543,7 +8543,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/grand-slams\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/grand-slams\""
           },
           {
             "lang": "TypeScript",
@@ -8585,7 +8585,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/leagues/"
+          "url": "https://datasportsapi.com/docs/teams/leagues/"
         },
         "parameters": [
           {
@@ -8726,7 +8726,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/leagues\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/leagues\""
           },
           {
             "lang": "TypeScript",
@@ -8768,7 +8768,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/trophies/"
+          "url": "https://datasportsapi.com/docs/teams/trophies/"
         },
         "parameters": [
           {
@@ -8919,7 +8919,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/trophies\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/trophies\""
           },
           {
             "lang": "TypeScript",
@@ -8961,7 +8961,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/position-history/"
+          "url": "https://datasportsapi.com/docs/teams/position-history/"
         },
         "parameters": [
           {
@@ -9128,7 +9128,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/position-history?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/position-history?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -9170,7 +9170,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/career-statistics/"
+          "url": "https://datasportsapi.com/docs/teams/career-statistics/"
         },
         "parameters": [
           {
@@ -9299,7 +9299,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/career-statistics\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/career-statistics\""
           },
           {
             "lang": "TypeScript",
@@ -9341,7 +9341,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/rankings/"
+          "url": "https://datasportsapi.com/docs/teams/rankings/"
         },
         "parameters": [
           {
@@ -9482,7 +9482,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/rankings\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/rankings\""
           },
           {
             "lang": "TypeScript",
@@ -9522,7 +9522,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/top-players/"
+          "url": "https://datasportsapi.com/docs/teams/top-players/"
         },
         "parameters": [
           {
@@ -9758,7 +9758,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/top-players?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/top-players?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -9800,7 +9800,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/teams/featured-fixture/"
+          "url": "https://datasportsapi.com/docs/teams/featured-fixture/"
         },
         "parameters": [
           {
@@ -9929,7 +9929,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/featured-fixture\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/teams/{id}/featured-fixture\""
           },
           {
             "lang": "TypeScript",
@@ -9971,7 +9971,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/get/"
+          "url": "https://datasportsapi.com/docs/players/get/"
         },
         "parameters": [
           {
@@ -10100,7 +10100,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -10142,7 +10142,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/transfers/"
+          "url": "https://datasportsapi.com/docs/players/transfers/"
         },
         "parameters": [
           {
@@ -10283,7 +10283,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/transfers\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/transfers\""
           },
           {
             "lang": "TypeScript",
@@ -10325,7 +10325,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/transfers-list/"
+          "url": "https://datasportsapi.com/docs/players/transfers-list/"
         },
         "parameters": [
           {
@@ -10599,7 +10599,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/transfers\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/transfers\""
           },
           {
             "lang": "TypeScript",
@@ -10641,7 +10641,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/seasons/"
+          "url": "https://datasportsapi.com/docs/players/seasons/"
         },
         "parameters": [
           {
@@ -10782,7 +10782,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/seasons\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/seasons\""
           },
           {
             "lang": "TypeScript",
@@ -10824,7 +10824,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/fixtures/"
+          "url": "https://datasportsapi.com/docs/players/fixtures/"
         },
         "parameters": [
           {
@@ -10983,7 +10983,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/fixtures\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/fixtures\""
           },
           {
             "lang": "TypeScript",
@@ -11025,7 +11025,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/statistics/"
+          "url": "https://datasportsapi.com/docs/players/statistics/"
         },
         "parameters": [
           {
@@ -11205,7 +11205,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/statistics?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/statistics?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -11245,7 +11245,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/statistics-rankings/"
+          "url": "https://datasportsapi.com/docs/players/statistics-rankings/"
         },
         "parameters": [
           {
@@ -11432,7 +11432,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/statistics/rankings?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/statistics/rankings?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -11472,7 +11472,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/penalties/"
+          "url": "https://datasportsapi.com/docs/players/penalties/"
         },
         "parameters": [
           {
@@ -11636,7 +11636,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/penalties?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/penalties?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -11676,7 +11676,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/attributes/"
+          "url": "https://datasportsapi.com/docs/players/attributes/"
         },
         "parameters": [
           {
@@ -11805,7 +11805,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/attributes\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/attributes\""
           },
           {
             "lang": "TypeScript",
@@ -11847,7 +11847,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/national-team/"
+          "url": "https://datasportsapi.com/docs/players/national-team/"
         },
         "parameters": [
           {
@@ -11988,7 +11988,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/national-team\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/national-team\""
           },
           {
             "lang": "TypeScript",
@@ -12030,7 +12030,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/career/"
+          "url": "https://datasportsapi.com/docs/players/career/"
         },
         "parameters": [
           {
@@ -12174,7 +12174,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/career\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/career\""
           },
           {
             "lang": "TypeScript",
@@ -12214,7 +12214,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/heatmap/"
+          "url": "https://datasportsapi.com/docs/players/heatmap/"
         },
         "parameters": [
           {
@@ -12378,7 +12378,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/heatmap?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/heatmap?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -12418,7 +12418,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/players/ratings/"
+          "url": "https://datasportsapi.com/docs/players/ratings/"
         },
         "parameters": [
           {
@@ -12585,7 +12585,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/ratings?league=…&season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/players/{id}/ratings?league=…&season=…\""
           },
           {
             "lang": "TypeScript",
@@ -12627,7 +12627,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/get/"
+          "url": "https://datasportsapi.com/docs/leagues/get/"
         },
         "parameters": [
           {
@@ -12756,7 +12756,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -12798,7 +12798,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/seasons/"
+          "url": "https://datasportsapi.com/docs/leagues/seasons/"
         },
         "parameters": [
           {
@@ -12939,7 +12939,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/seasons\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/seasons\""
           },
           {
             "lang": "TypeScript",
@@ -12981,7 +12981,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/champions/"
+          "url": "https://datasportsapi.com/docs/leagues/champions/"
         },
         "parameters": [
           {
@@ -13122,7 +13122,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/champions\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/champions\""
           },
           {
             "lang": "TypeScript",
@@ -13164,7 +13164,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/venues/"
+          "url": "https://datasportsapi.com/docs/leagues/venues/"
         },
         "parameters": [
           {
@@ -13318,7 +13318,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/venues?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/venues?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -13360,7 +13360,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/calendar/"
+          "url": "https://datasportsapi.com/docs/leagues/calendar/"
         },
         "parameters": [
           {
@@ -13517,7 +13517,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/calendar?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/calendar?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -13557,7 +13557,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/player-of-the-season-history/"
+          "url": "https://datasportsapi.com/docs/leagues/player-of-the-season-history/"
         },
         "parameters": [
           {
@@ -13702,7 +13702,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-of-the-season/history\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-of-the-season/history\""
           },
           {
             "lang": "TypeScript",
@@ -13744,7 +13744,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/teams/"
+          "url": "https://datasportsapi.com/docs/leagues/teams/"
         },
         "parameters": [
           {
@@ -13898,7 +13898,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/teams?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/teams?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -13940,7 +13940,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/season/"
+          "url": "https://datasportsapi.com/docs/leagues/season/"
         },
         "parameters": [
           {
@@ -14088,7 +14088,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/seasons/{seasonId}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/seasons/{seasonId}\""
           },
           {
             "lang": "TypeScript",
@@ -14130,7 +14130,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/standings/"
+          "url": "https://datasportsapi.com/docs/leagues/standings/"
         },
         "parameters": [
           {
@@ -14366,7 +14366,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/standings?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/standings?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -14408,7 +14408,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/rounds/"
+          "url": "https://datasportsapi.com/docs/leagues/rounds/"
         },
         "parameters": [
           {
@@ -14556,7 +14556,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/rounds?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/rounds?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -14598,7 +14598,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/fixtures/"
+          "url": "https://datasportsapi.com/docs/leagues/fixtures/"
         },
         "parameters": [
           {
@@ -14805,7 +14805,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/fixtures?season=…&round=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/fixtures?season=…&round=…\""
           },
           {
             "lang": "TypeScript",
@@ -14845,7 +14845,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/top-players/"
+          "url": "https://datasportsapi.com/docs/leagues/top-players/"
         },
         "parameters": [
           {
@@ -15071,7 +15071,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/top-players?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/top-players?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -15111,7 +15111,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/top-performances/"
+          "url": "https://datasportsapi.com/docs/leagues/top-performances/"
         },
         "parameters": [
           {
@@ -15304,7 +15304,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/top-performances?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/top-performances?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -15346,7 +15346,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/draft/"
+          "url": "https://datasportsapi.com/docs/leagues/draft/"
         },
         "parameters": [
           {
@@ -15512,7 +15512,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/draft?year=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/draft?year=…\""
           },
           {
             "lang": "TypeScript",
@@ -15554,7 +15554,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/top-teams/"
+          "url": "https://datasportsapi.com/docs/leagues/top-teams/"
         },
         "parameters": [
           {
@@ -15780,7 +15780,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/top-teams?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/top-teams?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -15820,7 +15820,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/player-statistics/"
+          "url": "https://datasportsapi.com/docs/leagues/player-statistics/"
         },
         "parameters": [
           {
@@ -16167,7 +16167,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-statistics?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-statistics?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -16209,7 +16209,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/cup-trees/"
+          "url": "https://datasportsapi.com/docs/leagues/cup-trees/"
         },
         "parameters": [
           {
@@ -16363,7 +16363,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/cup-trees?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/cup-trees?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -16405,7 +16405,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/team-of-the-week-periods/"
+          "url": "https://datasportsapi.com/docs/leagues/team-of-the-week-periods/"
         },
         "parameters": [
           {
@@ -16559,7 +16559,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/team-of-the-week/periods?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/team-of-the-week/periods?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -16599,7 +16599,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/team-of-the-week/"
+          "url": "https://datasportsapi.com/docs/leagues/team-of-the-week/"
         },
         "parameters": [
           {
@@ -16763,7 +16763,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/team-of-the-week?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/team-of-the-week?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -16805,7 +16805,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/featured-fixtures/"
+          "url": "https://datasportsapi.com/docs/leagues/featured-fixtures/"
         },
         "parameters": [
           {
@@ -16946,7 +16946,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/featured-fixtures\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/featured-fixtures\""
           },
           {
             "lang": "TypeScript",
@@ -16986,7 +16986,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/player-of-the-season/"
+          "url": "https://datasportsapi.com/docs/leagues/player-of-the-season/"
         },
         "parameters": [
           {
@@ -17134,7 +17134,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-of-the-season?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-of-the-season?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -17174,7 +17174,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/leagues/player-of-the-season-race/"
+          "url": "https://datasportsapi.com/docs/leagues/player-of-the-season-race/"
         },
         "parameters": [
           {
@@ -17328,7 +17328,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-of-the-season/race?season=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/{id}/player-of-the-season/race?season=…\""
           },
           {
             "lang": "TypeScript",
@@ -17370,7 +17370,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/discovery/rankings-list/"
+          "url": "https://datasportsapi.com/docs/discovery/rankings-list/"
         },
         "parameters": [
           {
@@ -17539,7 +17539,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/rankings\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/rankings\""
           },
           {
             "lang": "TypeScript",
@@ -17581,7 +17581,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/discovery/rankings-get/"
+          "url": "https://datasportsapi.com/docs/discovery/rankings-get/"
         },
         "parameters": [
           {
@@ -17766,7 +17766,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/rankings/{type}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/rankings/{type}\""
           },
           {
             "lang": "TypeScript",
@@ -17808,7 +17808,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/discovery/categories-list/"
+          "url": "https://datasportsapi.com/docs/discovery/categories-list/"
         },
         "parameters": [
           {
@@ -17980,7 +17980,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/categories?sport=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/categories?sport=…\""
           },
           {
             "lang": "TypeScript",
@@ -18022,7 +18022,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/discovery/leagues-list/"
+          "url": "https://datasportsapi.com/docs/discovery/leagues-list/"
         },
         "parameters": [
           {
@@ -18226,7 +18226,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues\""
           },
           {
             "lang": "TypeScript",
@@ -18268,7 +18268,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/discovery/leagues-popular/"
+          "url": "https://datasportsapi.com/docs/discovery/leagues-popular/"
         },
         "parameters": [
           {
@@ -18457,7 +18457,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/popular?sport=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/leagues/popular?sport=…\""
           },
           {
             "lang": "TypeScript",
@@ -18499,7 +18499,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/list/"
+          "url": "https://datasportsapi.com/docs/races/list/"
         },
         "parameters": [
           {
@@ -18662,7 +18662,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races?sport=…&date=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races?sport=…&date=…\""
           },
           {
             "lang": "TypeScript",
@@ -18704,7 +18704,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/get/"
+          "url": "https://datasportsapi.com/docs/races/get/"
         },
         "parameters": [
           {
@@ -18833,7 +18833,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -18875,7 +18875,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/results/"
+          "url": "https://datasportsapi.com/docs/races/results/"
         },
         "parameters": [
           {
@@ -19039,7 +19039,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races/{id}/results\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races/{id}/results\""
           },
           {
             "lang": "TypeScript",
@@ -19079,7 +19079,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/laps/"
+          "url": "https://datasportsapi.com/docs/races/laps/"
         },
         "parameters": [
           {
@@ -19243,7 +19243,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races/{id}/laps\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/races/{id}/laps\""
           },
           {
             "lang": "TypeScript",
@@ -19285,7 +19285,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/series-list/"
+          "url": "https://datasportsapi.com/docs/races/series-list/"
         },
         "parameters": [
           {
@@ -19429,7 +19429,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series?category=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series?category=…\""
           },
           {
             "lang": "TypeScript",
@@ -19471,7 +19471,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/series-get/"
+          "url": "https://datasportsapi.com/docs/races/series-get/"
         },
         "parameters": [
           {
@@ -19600,7 +19600,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -19642,7 +19642,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/series-seasons/"
+          "url": "https://datasportsapi.com/docs/races/series-seasons/"
         },
         "parameters": [
           {
@@ -19783,7 +19783,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}/seasons\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}/seasons\""
           },
           {
             "lang": "TypeScript",
@@ -19825,7 +19825,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/series-races/"
+          "url": "https://datasportsapi.com/docs/races/series-races/"
         },
         "parameters": [
           {
@@ -19982,7 +19982,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}/races\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}/races\""
           },
           {
             "lang": "TypeScript",
@@ -20024,7 +20024,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/races/series-standings/"
+          "url": "https://datasportsapi.com/docs/races/series-standings/"
         },
         "parameters": [
           {
@@ -20198,7 +20198,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}/standings\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/series/{id}/standings\""
           },
           {
             "lang": "TypeScript",
@@ -20240,7 +20240,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/people/referees-get/"
+          "url": "https://datasportsapi.com/docs/people/referees-get/"
         },
         "parameters": [
           {
@@ -20378,7 +20378,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/referees/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/referees/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -20420,7 +20420,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/people/referees-fixtures/"
+          "url": "https://datasportsapi.com/docs/people/referees-fixtures/"
         },
         "parameters": [
           {
@@ -20599,7 +20599,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/referees/{id}/fixtures\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/referees/{id}/fixtures\""
           },
           {
             "lang": "TypeScript",
@@ -20641,7 +20641,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/people/managers-get/"
+          "url": "https://datasportsapi.com/docs/people/managers-get/"
         },
         "parameters": [
           {
@@ -20779,7 +20779,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/managers/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/managers/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -20821,7 +20821,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/people/managers-fixtures/"
+          "url": "https://datasportsapi.com/docs/people/managers-fixtures/"
         },
         "parameters": [
           {
@@ -21000,7 +21000,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/managers/{id}/fixtures\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/managers/{id}/fixtures\""
           },
           {
             "lang": "TypeScript",
@@ -21042,7 +21042,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/venues/get/"
+          "url": "https://datasportsapi.com/docs/venues/get/"
         },
         "parameters": [
           {
@@ -21171,7 +21171,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/venues/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/venues/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -21213,7 +21213,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/venues/fixtures/"
+          "url": "https://datasportsapi.com/docs/venues/fixtures/"
         },
         "parameters": [
           {
@@ -21437,7 +21437,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/venues/{id}/fixtures\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/venues/{id}/fixtures\""
           },
           {
             "lang": "TypeScript",
@@ -21479,7 +21479,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/search/query/"
+          "url": "https://datasportsapi.com/docs/search/query/"
         },
         "parameters": [
           {
@@ -21672,7 +21672,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/search?q=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/search?q=…\""
           },
           {
             "lang": "TypeScript",
@@ -21712,7 +21712,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/odds/fixtures-odds/"
+          "url": "https://datasportsapi.com/docs/odds/fixtures-odds/"
         },
         "parameters": [
           {
@@ -21850,7 +21850,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/odds\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/odds\""
           },
           {
             "lang": "TypeScript",
@@ -21890,7 +21890,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/odds/fixtures-winning-odds/"
+          "url": "https://datasportsapi.com/docs/odds/fixtures-winning-odds/"
         },
         "parameters": [
           {
@@ -22019,7 +22019,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/odds/winning\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/odds/winning\""
           },
           {
             "lang": "TypeScript",
@@ -22059,7 +22059,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/odds/list/"
+          "url": "https://datasportsapi.com/docs/odds/list/"
         },
         "parameters": [
           {
@@ -22241,7 +22241,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/odds?sport=…\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/odds?sport=…\""
           },
           {
             "lang": "TypeScript",
@@ -22279,7 +22279,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/tracking/get/"
+          "url": "https://datasportsapi.com/docs/tracking/get/"
         },
         "parameters": [
           {
@@ -22408,7 +22408,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking\""
           },
           {
             "lang": "TypeScript",
@@ -22446,7 +22446,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/tracking/ball/"
+          "url": "https://datasportsapi.com/docs/tracking/ball/"
         },
         "parameters": [
           {
@@ -22622,7 +22622,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/ball\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/ball\""
           },
           {
             "lang": "TypeScript",
@@ -22660,7 +22660,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/tracking/events/"
+          "url": "https://datasportsapi.com/docs/tracking/events/"
         },
         "parameters": [
           {
@@ -22842,7 +22842,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/events\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/events\""
           },
           {
             "lang": "TypeScript",
@@ -22880,7 +22880,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/tracking/timeline/"
+          "url": "https://datasportsapi.com/docs/tracking/timeline/"
         },
         "parameters": [
           {
@@ -23021,7 +23021,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/timeline\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/timeline\""
           },
           {
             "lang": "TypeScript",
@@ -23059,7 +23059,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/tracking/players/"
+          "url": "https://datasportsapi.com/docs/tracking/players/"
         },
         "parameters": [
           {
@@ -23259,7 +23259,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/players\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/fixtures/{id}/tracking/players\""
           },
           {
             "lang": "TypeScript",
@@ -23298,7 +23298,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/exports/create/"
+          "url": "https://datasportsapi.com/docs/exports/create/"
         },
         "parameters": [],
         "requestBody": {
@@ -23452,7 +23452,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -X POST -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/exports\""
+            "source": "curl -X POST -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/exports\""
           },
           {
             "lang": "TypeScript",
@@ -23489,7 +23489,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/exports/list/"
+          "url": "https://datasportsapi.com/docs/exports/list/"
         },
         "parameters": [],
         "responses": {
@@ -23619,7 +23619,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/exports\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/exports\""
           },
           {
             "lang": "TypeScript",
@@ -23658,7 +23658,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/exports/get/"
+          "url": "https://datasportsapi.com/docs/exports/get/"
         },
         "parameters": [
           {
@@ -23787,7 +23787,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/exports/{id}\""
+            "source": "curl -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/exports/{id}\""
           },
           {
             "lang": "TypeScript",
@@ -23826,7 +23826,7 @@
         ],
         "externalDocs": {
           "description": "Docs page",
-          "url": "https://datasportsapi.com/docs/api/websocket/stream-ticket/"
+          "url": "https://datasportsapi.com/docs/websocket/stream-ticket/"
         },
         "parameters": [],
         "responses": {
@@ -23961,7 +23961,7 @@
           {
             "lang": "Shell",
             "label": "cURL",
-            "source": "curl -X POST -H \"Authorization: Bearer dsa_live_…\" \\\n    \"https://api.datasportsapi.com/v2/stream/ticket\""
+            "source": "curl -X POST -H \"Authorization: Bearer sk_live_…\" \\\n    \"https://api.datasportsapi.com/v2/stream/ticket\""
           }
         ]
       }
@@ -23972,7 +23972,7 @@
       "bearerAuth": {
         "type": "http",
         "scheme": "bearer",
-        "description": "Your secret API key: `Authorization: Bearer dsa_live_…`. Publishable widget keys (`dsa_pub_…`) work only for the endpoints widgets read, from the sites registered on them."
+        "description": "Your secret API key: `Authorization: Bearer sk_live_…`. Publishable widget keys (`dsa_pub_…`) work only for the endpoints widgets read, from the sites registered on them."
       }
     },
     "headers": {

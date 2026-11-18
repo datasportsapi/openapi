@@ -4,8 +4,8 @@ The OpenAPI 3.1 description of [DataSportsAPI](https://datasportsapi.com), a
 real-time sports data API for 24 sports: every `/v2` endpoint with its
 parameters, responses and schemas.
 
-> **Pre-launch.** Accounts and API keys are open at
-> [datasportsapi.com](https://datasportsapi.com); calls to the API start at launch.
+> **Live.** The API answers today: get a free key (1,000 requests a day, no card)
+> at [datasportsapi.com/signup](https://datasportsapi.com/signup/).
 
 `openapi.json` here is the same file the site serves at
 <https://datasportsapi.com/openapi.json>; it is generated from the docs and
