@@ -29,4 +29,4 @@ Authenticate with `Authorization: Bearer <your key>`.
 
 You may use this description to build and test clients for DataSportsAPI.
 Questions: [hello@datasportsapi.com](mailto:hello@datasportsapi.com) or the [developer Discord](https://datasportsapi.com/discord).
-© Noventra Software Ltd.
+© DataSportsAPI.
