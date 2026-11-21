@@ -28,5 +28,5 @@ Authenticate with `Authorization: Bearer <your key>`.
 - Python: [`datasportsapi` on PyPI](https://pypi.org/project/datasportsapi/) ([source](https://github.com/datasportsapi/datasportsapi-python))
 
 You may use this description to build and test clients for DataSportsAPI.
-Questions: [hello@datasportsapi.com](mailto:hello@datasportsapi.com) or the [developer Discord](https://datasportsapi.com/discord).
+Questions: [hello@datasportsapi.com](mailto:hello@datasportsapi.com).
 © DataSportsAPI.

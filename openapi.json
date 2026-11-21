@@ -6845,7 +6845,7 @@
           "teams"
         ],
         "summary": "Team",
-        "description": "Returns a team’s profile — sport, country, venue, colours, logo, gender, whether it is a club or a national team, kind (team / individual / pair), manager and founding date (foundedOn, present for roughly half of all teams). Individual competitors that the source profiles (tennis, MMA) also get person: nickname, date of birth, height, weight, reach and weight class, with tennis adding birthplace, residence, handedness (right / left / ambidextrous), turnedPro (a year) and prize money for the current season and the whole career (Money). MMA and boxing fighters additionally carry record: their career win-draw-loss tally plus their latest fights and how each one was decided.\n\n**Plans:** Every plan, Free included.",
+        "description": "Returns a team’s profile — sport, country, venue, colours, logo, gender, whether it is a club or a national team, kind (team / individual / pair), manager, founding date (foundedOn, present for roughly half of all teams) and, where the source records them, the spans of years the team was active (activePeriods). Individual competitors that the source profiles (tennis, MMA) also get person: nickname, date of birth, height, weight, reach and weight class, with tennis adding birthplace, residence, handedness (right / left / ambidextrous), turnedPro (a year) and prize money for the current season and the whole career (Money). MMA and boxing fighters additionally carry record: their career win-draw-loss tally plus their latest fights and how each one was decided.\n\n**Plans:** Every plan, Free included.",
         "x-plans": [
           "free",
           "starter",
@@ -14231,7 +14231,7 @@
           "leagues"
         ],
         "summary": "League",
-        "description": "A league’s profile: tier (level in the national pyramid), gender, reigning champion and its title count, clubs with the most titles, the divisions above and below, and when the current season starts and ends. The category field reflects how our data source groups leagues — by country, by region (e.g. International), by tour (e.g. ATP) or by esports title; country is populated only for categories that are countries.\n\n**Plans:** Every plan, Free included.",
+        "description": "A league’s profile: tier (level in the national pyramid), gender, reigning champion and its title count, clubs with the most titles, the divisions above and below, the competitions the source links to it (relatedLeagues: a pre-season, a postseason, a sister event), and when the current season starts and ends. The category field reflects how our data source groups leagues — by country, by region (e.g. International), by tour (e.g. ATP) or by esports title; country is populated only for categories that are countries.\n\n**Plans:** Every plan, Free included.",
         "x-plans": [
           "free",
           "starter",
@@ -29114,7 +29114,7 @@
                 "type": "null"
               }
             ],
-            "description": "Basketball: timeouts each side has left. Null outside an in-progress or interrupted game, and whenever the source does not track them. Delivered live via WebSocket deltas."
+            "description": "Basketball: timeouts each side has left, and the one being taken (`active`). Null outside an in-progress or interrupted game, and whenever the source does not track them. Delivered live via WebSocket deltas."
           },
           "downAndDistance": {
             "anyOf": [
@@ -30366,6 +30366,16 @@
                         "type": "null"
                       }
                     ]
+                  },
+                  "active": {
+                    "anyOf": [
+                      {
+                        "$ref": "#/components/schemas/ActiveTimeout"
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
                   }
                 },
                 "additionalProperties": false
@@ -30374,7 +30384,7 @@
                 "type": "null"
               }
             ],
-            "description": "Basketball: timeout counts that were modified; null once play has stopped."
+            "description": "Basketball: the timeout fields that changed. `active` comes whole when a timeout starts and as null when play restarts (since 2026-11-21). Null once play has stopped."
           },
           "downAndDistance": {
             "anyOf": [
@@ -31004,6 +31014,13 @@
               }
             ],
             "description": "For motorsport drivers and constructors (Formula 1 and others): race number, constructor, chassis and power unit. Null on every other team. Available since 2026-11-20."
+          },
+          "activePeriods": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ActivePeriod"
+            },
+            "description": "Spans of years in which the team competed, where the source records them (Formula 1 constructors, for example); [] for most teams. Available since 2026-11-21."
           }
         },
         "required": [
@@ -31024,7 +31041,8 @@
           "person",
           "record",
           "foundedOn",
-          "motorsport"
+          "motorsport",
+          "activePeriods"
         ],
         "additionalProperties": false
       },
@@ -35781,7 +35799,7 @@
       },
       "Timeouts": {
         "type": "object",
-        "description": "Basketball: remaining timeouts for each side, as tracked by the source.",
+        "description": "Basketball: the timeouts each side has left and the one being taken right now, as tracked by the source.",
         "properties": {
           "homeRemaining": {
             "anyOf": [
@@ -35821,12 +35839,88 @@
               }
             ],
             "description": "Timeouts each side is allotted for the game (7 in the NBA)."
+          },
+          "active": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ActiveTimeout"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The timeout in progress; null while none is running. Available since 2026-11-21."
           }
         },
         "required": [
           "homeRemaining",
           "awayRemaining",
-          "perTeam"
+          "perTeam",
+          "active"
+        ],
+        "additionalProperties": false
+      },
+      "ActiveTimeout": {
+        "type": "object",
+        "description": "Basketball: a timeout in progress. It stays filled for the whole break (in the NBA that is often 2–4 minutes once the TV break is added) and turns null when play restarts. Available since 2026-11-21.",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/TimeoutType",
+            "description": "What kind of timeout it is."
+          },
+          "side": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Side"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The side that asked for it; null when the source does not tie it to either team of the fixture."
+          },
+          "durationSeconds": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Length of the timeout (60 in the NBA). Unit: seconds."
+          },
+          "clock": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Game clock at the moment it was called, written as the source writes it: \"1:06\" means 1:06 to play in the period."
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The source's own line for it, for example \"Nets 60 second timeout\"."
+          }
+        },
+        "required": [
+          "type",
+          "side",
+          "durationSeconds",
+          "clock",
+          "description"
         ],
         "additionalProperties": false
       },
@@ -40436,7 +40530,7 @@
                 "type": "null"
               }
             ],
-            "description": "Basketball: timeouts left for each side, filled only during an in-progress or interrupted game and only if our data source tracks them; null otherwise. WebSocket deltas carry live updates."
+            "description": "Basketball: timeouts left for each side and the one being taken (`active`), filled only during an in-progress or interrupted game and only if our data source tracks them; null otherwise. WebSocket deltas carry live updates."
           },
           "downAndDistance": {
             "anyOf": [
@@ -43065,6 +43159,13 @@
               }
             ],
             "description": "Tennis only: the most sets a match can run to, 3 or 5; null in other sports. Available since 2026-11-20."
+          },
+          "relatedLeagues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LeagueRef"
+            },
+            "description": "Competitions the source ties to this one: its pre-season, its postseason or a sister event run by the same body (the NFL lists NFL Preseason, NCAA Division I basketball lists March Madness). [] when there are none. Available since 2026-11-21."
           }
         },
         "required": [
@@ -43087,7 +43188,8 @@
           "currentSeasonStart",
           "currentSeasonEnd",
           "surface",
-          "bestOf"
+          "bestOf",
+          "relatedLeagues"
         ],
         "additionalProperties": false
       },
@@ -47594,6 +47696,13 @@
               }
             ],
             "description": "Power unit, such as \"Red Bull Ford DM01\"."
+          },
+          "drivers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TeamRef"
+            },
+            "description": "On a constructor: its drivers, in the source's order; each `id` opens that driver's own profile at /v2/teams/{id}. [] on a driver, or when the source lists none. Available since 2026-11-21."
           }
         },
         "required": [
@@ -47601,7 +47710,38 @@
           "mainDriver",
           "constructor",
           "chassis",
-          "engine"
+          "engine",
+          "drivers"
+        ],
+        "additionalProperties": false
+      },
+      "ActivePeriod": {
+        "type": "object",
+        "description": "A span of years in which a team was active. Available since 2026-11-21.",
+        "properties": {
+          "from": {
+            "type": "integer",
+            "description": "First year of the span.",
+            "maximum": 9007199254740991,
+            "exclusiveMinimum": 0
+          },
+          "to": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 9007199254740991,
+                "exclusiveMinimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Last year of the span; null while the team is still active."
+          }
+        },
+        "required": [
+          "from",
+          "to"
         ],
         "additionalProperties": false
       },
@@ -51478,6 +51618,20 @@
         "x-enumDescriptions": {
           "home": "The side listed as home in the fixture.",
           "away": "The side listed as away in the fixture."
+        }
+      },
+      "TimeoutType": {
+        "type": "string",
+        "enum": [
+          "team",
+          "challenge",
+          "other"
+        ],
+        "description": "Basketball: what kind of timeout is in progress.",
+        "x-enumDescriptions": {
+          "team": "Called by one of the teams.",
+          "challenge": "Taken while a coach's challenge is reviewed.",
+          "other": "Any kind not covered above."
         }
       },
       "Winner": {
