@@ -4,7 +4,7 @@ The OpenAPI 3.1 description of [DataSportsAPI](https://datasportsapi.com), a
 real-time sports data API for 25 sports: every `/v2` endpoint with its
 parameters, responses and schemas.
 
-> **Live.** The API answers today: get a free key (1,000 requests a day, no card)
+> **Live.** The API answers today: get a free key (100 requests a day, no card)
 > at [datasportsapi.com/signup](https://datasportsapi.com/signup/).
 
 `openapi.json` here is the same file the site serves at
